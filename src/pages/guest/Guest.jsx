@@ -35,7 +35,7 @@ const Guest = () => {
             <h3 className="interest-button__text">Work</h3>
           </div>
         </Link>
-        <Link to="/guest/both">
+        <Link to="/signup/interest/social/both">
           <div className="interest-button interest-button--both">
             <h3 className="interest-button__text">Both</h3>
           </div>

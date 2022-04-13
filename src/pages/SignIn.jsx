@@ -10,7 +10,7 @@ const SignIn = () => {
         <Header />
 
         <div className='topbar'>
-          <Link to='/signup'>
+          <Link to='/'>
             <h2>Sign Up</h2>
           </Link>
           <Link to='/guest'>

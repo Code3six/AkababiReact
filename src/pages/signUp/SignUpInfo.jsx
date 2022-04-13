@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -6,8 +6,16 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import NextIcon from '@mui/icons-material/ArrowForward';
 import '../styles/form.css';
 import '../styles/location.css';
+import { useForm } from "react-hook-form";
 
-const signUpInfo = () => {
+const SignUpInfo = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
+
   return (
     <div className='signupInfo'>
       <div
@@ -33,51 +41,52 @@ const signUpInfo = () => {
         <AddCircleIcon className='smaller__icon' />
       </div>
 
-      <form>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className='input-container'>
-          <input type='text' placeholder='Email' />
-          <input type='text' placeholder='First Name' />
-          <input type='text' placeholder='Last Name' />
+          <input {...register('email', { required: true })} type='text' placeholder='Email' required/>
+          {errors.email && <p>Email is required.</p>}
+          <input {...register('fname', { required: true })}  type='text' placeholder='First Name' required/>
+          <input {...register('lname', { required: true })}  type='text' placeholder='Last Name' required/>
         </div>
 
         <div className='gender-container'>
-          <input type='radio' name='gender' id='male'/>
+          <input {...register('male', { required: true })}  type='radio' name='gender' id='male' required/>
           <label for='male'>Male</label>
 
-          <input type='radio' name='gender' id='female'/>
+          <input {...register('female', { required: true })}  type='radio' name='gender' id='female'required/>
           <label for='female'>Female</label>
         </div>
 
         <div className='date-container'>
-          <input type='text' placeholder='DD' />
-          <input type='text' placeholder='MM' />
-          <input className='year' type='text' placeholder='YYYY' />
+          <input {...register('day', { required: true })}  type='text' placeholder='DD' required/>
+          <input {...register('month', { required: true })}  type='text' placeholder='MM' required/>
+          <input {...register('year', { required: true })}  className='year' type='text' placeholder='YYYY' required/>
         </div>
 
         <div className='password-container'>
-          <input type='password' placeholder='Password' />
+          <input {...register('password', { required: true })} type='password' placeholder='Password' required/>
         </div>
 
         <div className='password-container'>
-          <input type='password' placeholder='Confirm Password' />
+          <input {...register('password2', { required: true })}  type='password' placeholder='Confirm Password' required/>
         </div>
-      </form>
       <div className='signup_location'>
         <p>Location</p>
-        <input type='text' />
+        <input {...register('location', { required: true })} type='text' required/>
         <iframe
           src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3283.891401663795!2d38.78619897820133!3d8.997153227833236!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x209cbe597069517f!2zRWRuYSBNYWxsIC0g4Yqk4Yu14YqTIOGInuGIjQ!5e0!3m2!1sen!2suk!4v1648141410336!5m2!1sen!2suk'
           allowfullscreen=''
           loading='lazy'
         ></iframe>
       </div>
-      <div className='next_icon_container'>
+      <button type="submit" className='next_icon_container'>
         <Link to='/signup/category'>
           <NextIcon className='next_icon' />
         </Link>
-      </div>
+      </button>
+      </form>
     </div>
   );
 };
 
-export default signUpInfo;
+export default SignUpInfo;
