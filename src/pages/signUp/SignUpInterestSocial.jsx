@@ -82,7 +82,7 @@ const SignUpInterestSocial = () => {
         </div>
       </div>
       <div className="next_icon_container">
-        <Link to="">
+        <Link to="/signup/interest/work">
           <NextIcon className="next_icon" />
         </Link>
       </div>
