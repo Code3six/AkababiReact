@@ -1,0 +1,201 @@
+/* globals */
+a{
+    text-decoration: none;
+}
+.header__logo{
+    width: 80px;
+    height: 80px;
+    margin: 20px
+}
+
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.topbar h2{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #E8E8F1;
+    cursor: pointer;
+}
+
+.topbar a{
+    text-decoration: none;
+}
+.topbar h2.highlighted{
+    color: #2C8CF5;
+}
+
+button{
+    display: flex;
+    width: 200px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: 1px solid black;
+    padding: 3px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    cursor: pointer;
+}
+.btnauth___container{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn__logo{
+    width: 28px;
+    height: 28px;
+}
+.btn__ln{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn__original{
+    border-color: #2C8CF5; 
+    color: #2C8CF5;
+    margin-top: 100px;
+}
+
+.btn__fb{
+    border-color: #3c66c4; 
+    color: #3c66c4;
+}
+
+.btn__gl{
+    border-color: #CF4332; 
+    color: #CF4332;
+}
+
+.btn__ln{
+    border-color: #007BB5; 
+    color: #007BB5;
+}
+
+.btn__ln:hover{
+    background: #007BB5;
+    color: #fff;
+}
+
+.btn__fb:hover{
+    background: #3c66c4;
+    color: #fff;
+} 
+
+
+.icon__container{
+    text-align: center;
+}
+.bigger__icon{
+    height: 100px !important;
+    width: 100px !important;
+    color: #2C8CF5;
+    position: relative;
+}
+
+.smaller__icon{
+    color: #64B5AB;
+    height: 50px !important;
+    width: 50px !important;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: -40px;
+}
+
+.input-container{
+    display: flex;
+    flex-direction:column;
+    width: 60%;
+    margin: auto;
+}
+
+.input-container input{
+    margin-top: 20px;
+    padding: 8px;
+    color: #c4c4c4;
+    border: 1px solid #c4c4c4; 
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.gender-container{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.gender-container input{
+    margin: 5px;
+}
+
+
+.gender-container label{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+
+.date-container{
+    display: flex;
+    width: 60%;
+    margin: auto;
+}
+
+.date-container input{
+    flex: 1;
+    width: 30px;
+    margin: 5px;
+    margin-top: 20px;
+    padding: 8px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    border: 1px solid #c4c4c4;
+}
+
+.date-container input.year{
+    flex: 2;
+}
+
+.password-container input{
+    margin-top: 10px;
+    padding: 8px;
+    color: #c4c4c4;
+    border: 1px solid #c4c4c4; 
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+
+.password-container{
+    display: flex;
+    flex-direction:column;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+}

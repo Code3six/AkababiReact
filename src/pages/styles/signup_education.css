@@ -1,0 +1,63 @@
+.header {
+  background-color: #fdfdfd;
+  padding-bottom: 3px;
+  /* box-shadow: 0 0 3px rgba(0, 0, 0, 0.25); */
+}
+.signup_education {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.edu_input_container{
+
+}
+.edu_title {
+  font-family: Montserrat, serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 36px auto auto 60px;
+  line-height: 22px;
+}
+.edu_name_input {
+  display: block;
+  margin: 15px auto 15px auto;
+  padding: 8px;
+  background-color: #fdfdfd;
+  border: 0;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.25);
+}
+
+
+.edu_add{
+ margin-top: 15px;
+}
+.edu_add_btn{
+  font-size: 20px;
+  color: #2c8cf5;
+}
+
+.edu_start, .edu_finish {
+  display: flex;
+  width: 60%;
+  margin: 10px auto auto;
+  justify-content: space-between;
+}
+.edu_mini_date_input{
+  display: inline;
+  width: 20%;
+  margin: 0 5px 0 5px;
+  padding: 2px;
+  text-align: center;
+}
+
+.next_icon_container {
+  margin-left: 70%;
+  margin-bottom: 20px;
+}
+.next_icon_container .next_icon {
+  font-size: 35px;
+  color: #2c8cf5;
+}

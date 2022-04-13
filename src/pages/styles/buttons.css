@@ -1,0 +1,63 @@
+button{
+    display: flex;
+    width: 200px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: 1px solid black;
+    padding: 3px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    cursor: pointer;
+}
+.btnauth___container{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn__logo{
+    width: 28px;
+    height: 28px;
+}
+.btn__ln{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn__original{
+    border-color: #2C8CF5; 
+    color: #2C8CF5;
+    margin-top: 100px;
+}
+
+.btn__fb{
+    border-color: #3c66c4; 
+    color: #3c66c4;
+}
+
+.btn__gl{
+    border-color: #CF4332; 
+    color: #CF4332;
+}
+
+.btn__ln{
+    border-color: #007BB5; 
+    color: #007BB5;
+}
+
+.btn__ln:hover{
+    background: #007BB5;
+    color: #fff;
+}
+
+.btn__fb:hover{
+    background: #3c66c4;
+    color: #fff;
+} 

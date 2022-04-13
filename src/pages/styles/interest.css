@@ -1,0 +1,97 @@
+.interest-button {
+  /* background-color: black; */
+  /* position: absolute; */
+  width: 284px;
+  height: 97px;
+  left: 38px;
+  top: 321px;
+  border-radius: 5px;
+  margin: 30px 0 30px 0;
+  display: flex;
+  align-items: center;
+  /* justify-items: center; */
+}
+
+.interest-button--social {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../../assets/social.png");
+  background-size: contain;
+}
+.interest-button--work {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../../assets/work.png");
+  background-size: contain;
+}
+.interest-button--both {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../../assets/both.png");
+  background-size: contain;
+}
+.interest-button__text {
+  /* position: absolute; */
+  /* left: 36.94%;
+  right: 36.94%;
+  top: 44.75%;
+  bottom: 50.62%; */
+
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  /* identical to box height */
+
+  text-align: center;
+  width: 100%;
+
+  color: #ffffff;
+
+  mix-blend-mode: normal;
+}
+
+.interest-social {
+  margin: 20px 20px 0;
+}
+
+.interest-social__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.interest-social__text {
+  color: #2c8cf5;
+}
+
+.interest-social__text--secondary {
+  color: rgba(142, 196, 255, 1);
+}
+
+.interest-social__hr {
+  border: 2px solid #8ec4ff;
+}
+
+.interest-social__button {
+  margin: 5px;
+  padding: 0;
+  border-radius: 5px;
+  color: #2c8cf5;
+}
+
+.interest-social__interests {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 10px 0 0 0;
+  margin: 0;
+}

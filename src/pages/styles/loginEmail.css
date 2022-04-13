@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form-cont {
+  width: 100vw;
+  height: 637px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginEmail-form {
+  height: 20rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2.5rem;
+}
+
+.input-box {
+  height: 3rem;
+  background: #fdfdfd;
+  border: #e8e2e22d 2px solid;
+  box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 22px;
+  outline: none;
+}
+.loginEmail-form input::placeholder {
+  font-family: 'Montserrat';
+  font-size: 1.2rem;
+  color: #c4c4c4;
+  font-style: normal;
+}
+
+.input-box:focus {
+  border: 1px solid #2c8cf5;
+}
