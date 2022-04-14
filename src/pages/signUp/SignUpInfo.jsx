@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Header from '../../components/Header';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -11,16 +11,24 @@ import { useForm } from "react-hook-form";
 const SignUpInfo = () => {
   const { register, handleSubmit } = useForm();
   const [data, setData] = useState("");
+  const [condition, setCondition] = useState(false)
  const navigate = useNavigate()
 
  console.log(data)
     const handleForm = (e) => {
-     if (data === ''){
-      alert("error")
-     }else{
-       navigate('/sasd')
-     }
+      if(data === ''){
+        setCondition(false)
+      }else{
+        setCondition(true)
+      }
+
     }
+
+    useEffect(()=> {
+      if(condition === true){
+        navigate('/signup/category')
+      }
+    }, [condition])
   return (
     <div className='signupInfo'>
       <div
@@ -83,7 +91,7 @@ const SignUpInfo = () => {
           loading='lazy'
         ></iframe>
       </div>
-      <button onClick={handleForm} type="submit" className='next_icon_container'>
+      <button style={{border: "none"}}onClick={handleForm} type="submit" className='next_icon_container'>
         {/* <Link to='/signup/category'> */}
           <NextIcon className='next_icon' />
         {/* </Link> */}
