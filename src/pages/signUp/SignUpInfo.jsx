@@ -56,9 +56,9 @@ const SignUpInfo = () => {
 
       <form  onSubmit={handleSubmit((data) => setData(JSON.stringify(data)))}>
         <div className='input-container'>
-          <input {...register('email')} type='text' placeholder='Email' required/>
-          <input {...register('fname')}  type='text' placeholder='First Name' required/>
-          <input {...register('lname')}  type='text' placeholder='Last Name' required/>
+          <input {...register("email")}type='email' placeholder='Email' required/>
+          <input  {...register("firstName", { required: true, maxLength: 20 })} type='text' placeholder='First Name' required/>
+          <input {...register("lastName",{ required: true, maxLength: 20 })}   type='text' placeholder='Last Name' required/>
         </div>
 
         <div className='gender-container'>
@@ -70,21 +70,21 @@ const SignUpInfo = () => {
         </div>
 
         <div className='date-container'>
-          <input {...register('day')}  type='text' placeholder='DD' required/>
-          <input {...register('month')}  type='text' placeholder='MM' required/>
-          <input {...register('year')}  className='year' type='text' placeholder='YYYY' required/>
+          <input {...register('day', {maxLength: 2, pattern: /^[1-9]/})}  type='text' placeholder='DD' required/>
+          <input {...register('day', {maxLength: 2, pattern:/^[1-9]/})}  type='text' placeholder='MM' required/>
+          <input {...register('day', {maxLength: 4, pattern: /^[1-9]/})} className='year' type='text' placeholder='YYYY' required/>
         </div>
 
         <div className='password-container'>
-          <input {...register('password')} type='password' placeholder='Password' required/>
+          <input {...register('password', {pattern:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/})} type='password' placeholder='Password' required/>
         </div>
 
         <div className='password-container'>
-          <input {...register('password2')}  type='password' placeholder='Confirm Password' required/>
+          <input {...register('password2', {pattern:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/})}  type='password' placeholder='Confirm Password' required/>
         </div>
       <div className='signup_location'>
         <p>Location</p>
-        <input {...register('location')} type='text' required/>
+        <input {...register('location', {pattern: /^((\-?|\+?)?\d+(\.\d+)?),\s*((\-?|\+?)?\d+(\.\d+)?)$/})} type='text' required/>
         <iframe
           src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3283.891401663795!2d38.78619897820133!3d8.997153227833236!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x209cbe597069517f!2zRWRuYSBNYWxsIC0g4Yqk4Yu14YqTIOGInuGIjQ!5e0!3m2!1sen!2suk!4v1648141410336!5m2!1sen!2suk'
           allowfullscreen=''
