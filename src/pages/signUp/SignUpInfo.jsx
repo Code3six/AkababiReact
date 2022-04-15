@@ -76,12 +76,12 @@ const SignUpInfo = () => {
 
         <div className='password-container'>
           <input {...register('password', {pattern:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/})} type='password' placeholder='Password' required/>
-          <p style={{color: 'red', fontSize:'10px', marginTop: '3px'}}>Should contain Capital, small, number and Symbol</p>
+          <p style={{color: 'coral', fontSize:'10px', marginTop: '3px'}}>Should contain Capital, small, number and Symbol</p>
         </div>
 
         <div className='password-container'>
           <input {...register('password2', {pattern:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/})}  type='password' placeholder='Confirm Password' required/>
-          <p style={{color: 'red', fontSize:'10px', marginTop: '3px'}}>Should contain Capital, small, number and Symbol</p>
+          <p style={{color: 'coral', fontSize:'10px', marginTop: '3px'}}>Should contain Capital, small, number and Symbol</p>
         </div>
       <div className='signup_location'>
         <p>Location</p>
