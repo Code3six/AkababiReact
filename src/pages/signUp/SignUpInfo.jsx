@@ -93,9 +93,7 @@ const SignUpInfo = () => {
         ></iframe>
       </div>
       <button style={{border: "none"}}onClick={handleForm} type="submit" className='next_icon_container'>
-        {/* <Link to='/signup/category'> */}
           <NextIcon className='next_icon' />
-        {/* </Link> */}
       </button>
       </form>
     </div>
